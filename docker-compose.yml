@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+ app:
+  image: calci:latest
+  build:
+   context: .
+   dockerfile: Dockerfile
+  container_name: app
+  network_mode: host
