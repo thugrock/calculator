@@ -8,3 +8,5 @@ services:
    dockerfile: Dockerfile
   container_name: app
   network_mode: host
+  ports:
+     - "3000:3000"
