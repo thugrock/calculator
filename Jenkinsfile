@@ -15,7 +15,7 @@ pipeline {
         stage('Build docker image'){
             agent any
             steps{
-                sh 'sudo docker-compose up -d'
+                sh 'sudo docker-compose up -d --force-recreate --build --no-deps calci'
             }
         }
         stage('Docker Push') {
