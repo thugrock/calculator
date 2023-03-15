@@ -28,6 +28,12 @@ pipeline {
                 }
             }
         }
+        state('Clean the Clients'){
+            agent any
+            steps{
+                sh "ansible-playbook clean_clients.yml -i hosts"
+            }
+        }
         stage('Deploy by Ansible'){
             agent any
             steps{
