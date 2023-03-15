@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-        state('Clean the Clients'){
+        stage('Clean the Clients'){
             agent any
             steps{
                 sh "ansible-playbook clean_clients.yml -i hosts"
