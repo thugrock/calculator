@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of Calculator
+  hosts: all
+  tasks:
+    - name: pull docker image
+      shell: docker pull thugrock/calculator:latest
+    - name: run docker image
+      shell: docker run -p 3000:3000 -d --rm thugrock/calculator
