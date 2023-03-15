@@ -15,17 +15,23 @@ pipeline {
         stage('Build docker image'){
             agent any
             steps{
-                sh 'sudo docker-compose up -d --force-recreate --build --no-deps app'
+                sh 'docker-compose up -d --force-recreate --build --no-deps app'
             }
         }
         stage('Docker Push') {
             agent any
             steps {
                 withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-                sh "sudo docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-                sh "sudo docker tag calci thugrock/calculator"
-                sh 'sudo docker push thugrock/calculator'
+                sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+                sh "docker tag calci thugrock/calculator"
+                sh 'docker push thugrock/calculator'
                 }
+            }
+        }
+        stage('Deploy by Ansible'){
+            agent any
+            steps{
+                sh "ansible-playbook calculator.yml -i hosts"
             }
         }
     }
