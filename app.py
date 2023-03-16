@@ -52,7 +52,7 @@ dictConfig(
         "handlers": {
             "file": {
                 "class": "logging.FileHandler",
-                "filename": "flask.log",
+                "filename": "logs/flask.log",
                 "formatter": "default",
             },
         },
