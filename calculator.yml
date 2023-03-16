@@ -5,6 +5,6 @@
     - name: pull docker image
       shell: docker pull thugrock/calculator:latest
     - name: run docker image
-      shell: docker run -v ./test.log:test.log -v ./flask.log:falsk.log -p 3000:3000 -d --rm thugrock/calculator
+      shell: docker run -v "/etc/docker_logs/test.log":"/test.log" -v "/etc/docker_logs/flask.log":"/falsk.log" -p 3000:3000 -d --rm thugrock/calculator
     - name: Test the application
       shell: python3 test_app.py
