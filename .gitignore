@@ -1,0 +1,7 @@
+*.pyo
+*.pyc
+*cfg
+**/env/
+**/__pycache__/
+git-push-pass.txt
+test/

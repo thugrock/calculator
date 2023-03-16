@@ -7,18 +7,23 @@ pipeline {
                 git "https://github.com/thugrock/calculator.git"
             }
         }
-        stage('Build Code') {
+        stage('Building Requirements') {
             steps {
                 sh 'pip install -r requirements.txt'
             }
         }
-        stage('Build docker image'){
+        stage('Testing Code') {
+            steps {
+                sh 'python3 test_app.py'
+            }
+        }
+        stage('Building image'){
             agent any
             steps{
                 sh 'docker-compose up -d --force-recreate --build --no-deps app'
             }
         }
-        stage('Docker Push') {
+        stage('Pushing image to Hub') {
             agent any
             steps {
                 withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
