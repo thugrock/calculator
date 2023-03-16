@@ -2,6 +2,7 @@ import unittest
 from app import app
 import logging
 from logging.config import dictConfig
+import xmlrunner
 FORMAT ='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s'
 #app.logger.basicConfig(filename='test.log', level=logging.ERROR, format=FORMAT)
 
@@ -65,4 +66,5 @@ if __name__ == '__main__':
     log = logging.getLogger('werkzeug')
     # Run the tests
     log.setLevel(logging.CRITICAL)
+    runner = xmlrunner.XMLTestRunner(output='test-reports')
     unittest.main()

@@ -16,6 +16,9 @@ pipeline {
             steps {
                 sh 'python3 test_app.py'
             }
+            post {
+                always {junit 'test-reports/*.xml'}
+            }
         }
         stage('Building image'){
             agent any
@@ -36,7 +39,9 @@ pipeline {
         stage('Clean the Clients'){
             agent any
             steps{
-                sh "ansible-playbook clean_clients.yml -i hosts"
+                catchError(buildResult: "SUCCESS", stageResult: "SUCCESS") {
+                    sh "ansible-playbook clean_clients.yml -i hosts"
+                }
             }
         }
         stage('Deploy by Ansible'){

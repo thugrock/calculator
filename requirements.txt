@@ -5,3 +5,4 @@ Jinja2==2.11.3
 MarkupSafe==2.0.1
 Werkzeug==2.0.1
 Flask-Bootstrap==3.3.7.1
+xmlrunner==1.7.7
