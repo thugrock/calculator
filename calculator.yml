@@ -7,4 +7,4 @@
     - name: run docker image
       shell: docker run -v "/etc/docker_logs/":/src/app/logs -p 3000:3000 -d --rm thugrock/calculator
     - name: Test the application
-      shell: python3 ./src/app/test_app.py
+      shell: python3 src/app/test_app.py
