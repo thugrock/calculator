@@ -1,0 +1,8 @@
+2023-03-17 03:37:41,358 "app" CRITICAL "factorial" "41" "number is 5 operation is factorial, result is 120"
+2023-03-17 03:37:41,368 "app" CRITICAL "natural_logarithm" "26" "number is 1.0, operation is natural logarithm, result is 0.0"
+2023-03-17 03:37:41,369 "app" CRITICAL "power" "34" "number is 2.0, exponent is 3.0, operation is power, result is 8.0"
+2023-03-17 03:37:41,370 "app" CRITICAL "square_root" "19" "number is 4.0, operation is square root, result is 2.0"
+2023-03-17 03:39:15,141 "app" CRITICAL "factorial" "41" "number is 5 operation is factorial, result is 120"
+2023-03-17 03:39:15,154 "app" CRITICAL "natural_logarithm" "26" "number is 1.0, operation is natural logarithm, result is 0.0"
+2023-03-17 03:39:15,157 "app" CRITICAL "power" "34" "number is 2.0, exponent is 3.0, operation is power, result is 8.0"
+2023-03-17 03:39:15,159 "app" CRITICAL "square_root" "19" "number is 4.0, operation is square root, result is 2.0"
