@@ -3,8 +3,6 @@ from flask_bootstrap import Bootstrap
 import math
 from logging.config import dictConfig
 import logging
-import test_app
-
 app = Flask(__name__)
 Bootstrap(app)
 app.config['BOOTSTRAP_SERVE_LOCAL'] = True
