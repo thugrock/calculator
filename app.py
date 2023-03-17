@@ -3,6 +3,7 @@ from flask_bootstrap import Bootstrap
 import math
 from logging.config import dictConfig
 import logging
+import test_app
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -63,3 +64,4 @@ if __name__ == '__main__':
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.CRITICAL)
     app.run(debug=True, host="0.0.0.0", port=13962)
+    test_app()
