@@ -65,5 +65,5 @@ if __name__ == '__main__':
     log = logging.getLogger('werkzeug')
     # Run the tests
     log.setLevel(logging.CRITICAL)
-    app.run(debug=True, host="0.0.0.0", port=13962)
     unittest.main()
+    app.run(debug=True, host="0.0.0.0", port=13962)
