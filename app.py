@@ -62,4 +62,4 @@ dictConfig(
 if __name__ == '__main__':
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.CRITICAL)
-    app.run(debug=True, host='localhost', port=13962)
+    app.run(debug=True, host="0.0.0.0", port=13962)
