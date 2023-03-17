@@ -66,4 +66,3 @@ if __name__ == '__main__':
     # Run the tests
     log.setLevel(logging.CRITICAL)
     unittest.main()
-    app.run(debug=True, host="0.0.0.0", port=13962)
