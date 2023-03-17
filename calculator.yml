@@ -4,7 +4,5 @@
   tasks:
     - name: pull docker image
       shell: docker pull thugrock/calculator:latest
-    - name: run docker image
+    - name: run docker image and run tests
       shell: docker run -v "/etc/docker_logs/":/src/app/logs -p 3000:3000 -d --rm thugrock/calculator
-    - name: Test the application
-      shell: pwd
