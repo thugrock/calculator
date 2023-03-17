@@ -62,4 +62,4 @@ dictConfig(
 if __name__ == '__main__':
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.CRITICAL)
-    app.run()
+    app.run(debug=True)
