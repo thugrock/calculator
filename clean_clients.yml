@@ -3,6 +3,6 @@
   hosts: all
   tasks:
     - name: clean docker containers
-      shell: docker rm -f $(docker ps --filter expose=3000 -q)
+      shell: docker rm -f $(docker ps --filter expose=5000 -q)
     - name: clean docker images
       shell: docker rmi -f $(docker images --filter "dangling=true" -q --no-trunc)

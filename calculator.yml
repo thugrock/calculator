@@ -5,4 +5,4 @@
     - name: pull docker image
       shell: docker pull thugrock/calculator:latest
     - name: run docker image and run tests
-      shell: docker run -v "/etc/docker_logs":/src/app/logs -p 3000:3000 -td --rm thugrock/calculator
+      shell: docker run -v "/etc/docker_logs":/src/app/logs -p 5000:5000 -td --rm thugrock/calculator
