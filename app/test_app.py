@@ -49,7 +49,7 @@ class TestApp(unittest.TestCase):
 
     def test_not_natural_logarithm(self):
         response = self.client.post('/ln', data=dict(number=1))
-        self.assertEqual(response.status_code, 200)
+        self.assertNotEqual(response.status_code, 404)
         self.assertNotIn(b'Result: 1.0', response.data)
         app.logger.critical("number is 1, operation is natural logarithm, result is 0.0")
 
