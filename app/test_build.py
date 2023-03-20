@@ -57,4 +57,3 @@ if __name__ == '__main__':
     # Run the tests
     runner = xmlrunner.XMLTestRunner(output='./test-reports')
     unittest.main(testRunner=runner)
-
