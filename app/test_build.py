@@ -31,6 +31,30 @@ class TestApp(unittest.TestCase):
         self.assertIn(b'Factorial', response.data)
         self.assertIn(b'Result: 120', response.data)
 
+    def test_not_square_root(self):
+        response = self.client.post('/sqrt', data=dict(number=4))
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(b'Square Rot', response.data)
+        self.assertNotIn(b'Result: 3.0', response.data)
+
+    def test_not_natural_logarithm(self):
+        response = self.client.post('/ln', data=dict(number=1))
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(b'Natural Log', response.data)
+        self.assertNotIn(b'Result: 1.0', response.data)
+
+    def test_not_power(self):
+        response = self.client.post('/pow', data=dict(number=2, exponent=3))
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(b'Powr', response.data)
+        self.assertNotIn(b'Result: 7.0', response.data)
+
+    def test_not_factorial(self):
+        response = self.client.post('/fact', data=dict(number=5))
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(b'Factoril', response.data)
+        self.assertNotIn(b'Result: 130', response.data)
+
 
 if __name__ == '__main__':
         # Create a file handler for the test log file

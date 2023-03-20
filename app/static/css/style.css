@@ -1,38 +1,4 @@
 
-/* Center the form and buttons */
-/*
-form, button {
-  margin: auto;
-  display: block;
-  margin-bottom: 10px;
-}
-*/
-/* Center the result */
-/*
-h1, p {
-  text-align: center;
-}
-*.
-/* Add some padding to the result */
-/*
-p {
-  padding-top: 10px;
-}
-*/
-/* Change the color of the buttons */
-/*
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-*/
-/* Add some margin to the back to home button */
-/*
-.btn-primary:last-child {
-  margin-top: 20px;
-}
-*/
-
 * {
   margin: 0;
   padding: 0;
