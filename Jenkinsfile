@@ -41,14 +41,14 @@ pipeline {
             agent any
             steps{
                 catchError(buildResult: "SUCCESS", stageResult: "SUCCESS") {
-                    sh "ansible-playbook './Ansible playbooks/clean_clients.yml' -i ./Ansible playbooks/hosts"
+                    sh "ansible-playbook './Ansible-Playbooks/clean_clients.yml' -i ./Ansible-Playbooks/hosts"
                 }
             }
         }
         stage('Deploy by Ansible'){
             agent any
             steps{
-                sh "ansible-playbook './Ansible playbooks/calculator.yml' -i ./Ansible playbooks/hosts"
+                sh "ansible-playbook './Ansible-Playbooks/calculator.yml' -i ./Ansible-Playbooks/hosts"
             }
         }
     }
