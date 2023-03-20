@@ -40,7 +40,7 @@ class TestApp(unittest.TestCase):
         self.assertIn(b'Factorial', response.data)
         self.assertIn(b'Result: 120', response.data)
         app.logger.critical("number is 5, operation is factorial, result is 120")
-'''
+
     def test_not_square_root(self):
         response = self.client.post('/sqrt', data=dict(number=4))
         self.assertEqual(response.status_code, 200)
@@ -64,7 +64,6 @@ class TestApp(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertNotIn(b'Result: 130', response.data)
         app.logger.critical("number is 5, operation is factorial, result is 120")
-'''
 
 dictConfig(
     {
