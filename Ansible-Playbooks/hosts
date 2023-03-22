@@ -1,4 +1,2 @@
-[developer]
-client1 ansible_host=172.16.128.102 ansible_connection=ssh ansible_user=spe_client ansible_sudo_pass=13579@Jp
 [Tester]
 client_2 ansible_host=127.0.0.1 ansible_connection=ssh ansible_ssh_port=2200 ansible_user=spe_client_1 ansible_sudo_pass=13579@Jp
